@@ -1,0 +1,169 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+   background-color: rgb(124, 223, 109);
+   display: grid;
+   place-items: center
+   ;
+
+}
+.container{
+    width: 540px;
+    height: 500px;
+    background-color: cadetblue;
+    color: white;
+    display: flex;
+    user-select: none;
+}
+
+.left{
+    
+    background: #000;
+    flex:1
+    
+}
+
+.twocontent{
+    display: flex;
+    gap: 10;
+    padding: 15px;
+}
+
+.twocontent div {
+   text-align: center;
+   text-transform: uppercase;
+   padding: 5px;
+   font-size: 10px;
+   flex: 1;
+   border-radius: 2px;
+     
+}
+
+.right{
+    background-color: azure;
+    flex: 1; 
+}
+
+.twocontent p{
+    font-size: 17px;
+}
+.twocontent div.totalincome{
+color: green;
+border: 2px solid  green;
+margin-right: 10px;
+}
+
+
+.twocontent div.totalexpense{
+    color: rgb(128, 0, 0);
+    border: 2px solid red;
+    } 
+
+.right{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y:scroll;
+
+}
+
+#form{
+    padding: 5px;
+    margin-top: 1px;  
+}
+
+.form-control{
+    margin-top: 1px;
+}
+
+label{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"]{
+  border: 1px solid gainsboro;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+outline: none;
+border-radius: 2px;
+  padding: 4px;
+}
+
+.btn{
+    background-color: blue;
+    color: white;
+  display: block;
+   width: 100%;
+   margin-top: 10px;
+   padding: 10px;
+   border: none;
+}
+
+.right h3{
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+.trans li{
+  background-color: rgb(221, 203, 203);
+  color: grey;
+  padding:10px;
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  cursor: pointer;
+
+}
+
+
+.btn-del{
+    position: absolute;
+    top: -10px;
+    right: -1px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+
+}
+.trans li.exp{
+    border-left: 6px solid red;
+}
+
+.trans li.inc{
+    border-left: 6px solid green;
+}
+
+.trans li:hover .btn-del{
+    opacity: 1;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(204, 204, 228);
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 8px;
+}
